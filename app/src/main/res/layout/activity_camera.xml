@@ -95,9 +95,11 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/flash"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                >
 
                 <ImageView
                     android:layout_width="@dimen/size40"
@@ -109,6 +111,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/capture"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">

@@ -8,20 +8,28 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Matrix
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.SeekBar
+import androidx.annotation.OptIn
 import androidx.camera.core.AspectRatio
 import androidx.camera.core.Camera
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageAnalysis
+import androidx.camera.core.ImageCapture
+import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.camera.view.video.ExperimentalVideo
+import androidx.camera.view.video.OutputFileOptions
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
 import com.msc.demo_mvvm.base.activity.BaseActivity
 import com.msc.demo_mvvm.databinding.ActivityCameraBinding
+import java.io.File
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 import kotlin.random.Random
@@ -33,6 +41,7 @@ class CameraActivity : BaseActivity<ActivityCameraBinding>() {
 
     private var lensFacing: Int = CameraSelector.LENS_FACING_BACK
     private var camera : Camera? = null
+    private var imageCapture : ImageCapture? = null
 
     companion object {
         fun start(activity : Activity){
@@ -44,23 +53,58 @@ class CameraActivity : BaseActivity<ActivityCameraBinding>() {
         return ActivityCameraBinding.inflate(layoutInflater)
     }
 
+    @OptIn(ExperimentalVideo::class)
     override fun initViews() {
         super.initViews()
 
-        viewBinding.sbZoom.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
-            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
-                camera?.cameraControl?.setLinearZoom(p1/10f)
+        viewBinding.run {
+            sbZoom.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+                override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+                    camera?.cameraControl?.setLinearZoom(p1/10f)
+                }
+
+                override fun onStartTrackingTouch(p0: SeekBar?) {
+
+                }
+
+                override fun onStopTrackingTouch(p0: SeekBar?) {
+
+                }
+
+            })
+
+            flash.setOnClickListener {
+                camera?.cameraControl?.enableTorch(!flash.isSelected)
+                flash.isSelected = !flash.isSelected
+
+//                if(flash.isSelected){
+//                    flash.animate().alpha(1f).start()
+//                }else{
+//                    flash.animate().alpha(0.4f).start()
+//                }
             }
 
-            override fun onStartTrackingTouch(p0: SeekBar?) {
+            capture.setOnClickListener {
+                val file = File(externalMediaDirs.first(), "${System.currentTimeMillis()}.jpg")
+                val outputFileOptions = ImageCapture.OutputFileOptions.Builder(file).build()
 
+                imageCapture?.takePicture(
+                    outputFileOptions,
+                    ContextCompat.getMainExecutor(this@CameraActivity),
+                    object : ImageCapture.OnImageSavedCallback {
+                        override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
+                            // Image saved successfully, you can get the saved Uri
+                            val savedUri: Uri = outputFileResults.savedUri ?: Uri.fromFile(file)
+                            Log.i("gsdg", "onImageSaved: " + savedUri)
+                        }
+
+                        override fun onError(exception: ImageCaptureException) {
+                            Log.e("gsdg", "Error capturing image: ${exception.message}", exception)
+                        }
+                    }
+                )
             }
-
-            override fun onStopTrackingTouch(p0: SeekBar?) {
-
-            }
-
-        })
+        }
     }
 
     override fun onDestroy() {
@@ -75,21 +119,32 @@ class CameraActivity : BaseActivity<ActivityCameraBinding>() {
     @SuppressLint("UnsafeExperimentalUsageError")
     private fun bindCameraUseCases() = viewBinding.viewFinder.post {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
-        cameraProviderFuture.addListener ({
+        cameraProviderFuture.addListener({
             val cameraProvider = cameraProviderFuture.get()
+
             val preview = Preview.Builder()
                 .setTargetAspectRatio(AspectRatio.RATIO_4_3)
                 .setTargetRotation(viewBinding.viewFinder.display.rotation)
                 .build()
+
             val imageAnalysis = ImageAnalysis.Builder()
                 .setTargetAspectRatio(AspectRatio.RATIO_4_3)
                 .setTargetRotation(viewBinding.viewFinder.display.rotation)
                 .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
                 .setOutputImageFormat(ImageAnalysis.OUTPUT_IMAGE_FORMAT_RGBA_8888)
                 .build()
+
+            imageCapture = ImageCapture.Builder()
+                .setCaptureMode(ImageCapture.CAPTURE_MODE_MINIMIZE_LATENCY)
+                .setTargetAspectRatio(AspectRatio.RATIO_4_3)
+                .setTargetRotation(viewBinding.viewFinder.display.rotation)
+                .build()
+
             val cameraSelector = CameraSelector.Builder().requireLensFacing(lensFacing).build()
             cameraProvider.unbindAll()
-            camera = cameraProvider.bindToLifecycle(this as LifecycleOwner, cameraSelector, preview, imageAnalysis)
+
+            camera = cameraProvider.bindToLifecycle(this as LifecycleOwner, cameraSelector, preview, imageAnalysis, imageCapture)
+
             preview.setSurfaceProvider(viewBinding.viewFinder.surfaceProvider)
         }, ContextCompat.getMainExecutor(this))
     }
