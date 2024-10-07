@@ -60,4 +60,12 @@
     <string name="txt_read_media_permisison">Read media</string>
     <string name="txt_receiver_notification">Get notifications</string>
     <string name="txt_premission_request_message">In order for the application to operate stably, please provide the following permissions</string>
+    <string name="txt_zoom_in_on">Zoom in on every details!</string>
+    <string name="txt_zoom_in_on_desc">Zoom in on every detail with perfect clarity. Super Magnifier makes seeing the small things easy.</string>
+    <string name="txt_explore_now">Explore Now</string>
+    <string name="txt_magnifier">Magnifier</string>
+    <string name="txt_magnifier_desc">Tap to zoom in on anything</string>
+    <string name="txt_photo_collage">Photo collection</string>
+    <string name="txt_photo_collage_desc">Where to store your images</string>
+    <string name="txt_setting_desc">Customize your settings</string>
 </resources>
