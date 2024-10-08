@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/app_bg"
+    android:background="@color/white"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,7 +20,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginHorizontal="@dimen/size50"
             />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -29,13 +28,15 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/size16"
             android:gravity="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="@dimen/size22"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imgOnBoarding"
+            app:layout_constraintBottom_toTopOf="@id/tvIntro"
             tools:text="title onboarding"
+            android:layout_marginBottom="@dimen/size10"
             />
 
         <TextView
@@ -44,13 +45,15 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/size16"
             android:gravity="center"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="@dimen/size12"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_title"
-            tools:text="content onboarding" />
+            tools:text="content onboarding"
+            android:layout_marginBottom="@dimen/size20"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.facebook.shimmer.ShimmerFrameLayout
@@ -60,6 +63,7 @@
         android:layout_gravity="bottom"
         android:layout_margin="@dimen/size10"
         app:layout_constraintBottom_toBottomOf="parent"
+        tools:visibility="gone"
         >
         <include
             layout="@layout/layout_native_full_onboard"/>

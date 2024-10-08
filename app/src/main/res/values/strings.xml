@@ -8,12 +8,12 @@
     <string name="french">French</string>
     <string name="portuguese">Portuguese</string>
 
-    <string name="onboarding_title1">Animal sounds</string>
-    <string name="onboarding_intro1">Variety of different realistic animal sounds to choose from</string>
-    <string name="onboarding_title2">Set as ringtone</string>
-    <string name="onboarding_intro2">Set ringtones, contact ringtones, alarm sounds,…</string>
-    <string name="onboarding_title3">Each contact person</string>
-    <string name="onboarding_intro3">Set a different ringtone for each contact</string>
+    <string name="onboarding_title1">Adjust Zoom</string>
+    <string name="onboarding_intro1">Drag left or right to adjust the zoom level.</string>
+    <string name="onboarding_title2">More than just zoom</string>
+    <string name="onboarding_intro2">More functions for a better experience.</string>
+    <string name="onboarding_title3">Capture photo</string>
+    <string name="onboarding_intro3">Tap and Hold to capture image.</string>
 
     <string name="txt_categories">Categories</string>
     <string name="txt_favourite">Favourite</string>

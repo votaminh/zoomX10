@@ -8,6 +8,7 @@ import com.msc.demo_mvvm.admob.NameRemoteAdmob
 import com.msc.demo_mvvm.base.activity.BaseActivity
 import com.msc.demo_mvvm.R
 import com.msc.demo_mvvm.admob.NativeAdmob
+import com.msc.demo_mvvm.component.home.HomeActivity
 import com.msc.demo_mvvm.component.permission.PermissionActivity
 import com.msc.demo_mvvm.databinding.ActivityOnboardingBinding
 import com.msc.demo_mvvm.utils.NativeAdmobUtils
@@ -62,7 +63,7 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
                 if (currentPosition < onBoardingAdapter.getListData().size - 1) {
                     vpOnBoarding.setCurrentItem(currentPosition + 1, true)
                 } else {
-                    PermissionActivity.start(this@OnBoardingActivity)
+                    HomeActivity.start(this@OnBoardingActivity)
                     finish()
                 }
             }
