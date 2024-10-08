@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    
+    
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/size20"
+        android:layout_marginTop="@dimen/size10"
+        >
+        
+        <ImageView
+            android:id="@+id/imvBack"
+            android:layout_width="@dimen/size30"
+            android:layout_height="@dimen/size30"
+            android:src="@drawable/ic_back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_photo_collage"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size20"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/size10"/>
+        
+    </LinearLayout>
+
+    
+    <LinearLayout
+        android:id="@+id/llNoImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size100"
+        >
+        
+        <ImageView
+            android:layout_width="@dimen/size100"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_no_image"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_no_image"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/size14"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_your_have_not_image"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/size12"
+            />
+        
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rePhotos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:paddingVertical="@dimen/size30"
+        android:clipToPadding="false"
+        android:layout_marginHorizontal="@dimen/size10"
+        />
+
+</RelativeLayout>

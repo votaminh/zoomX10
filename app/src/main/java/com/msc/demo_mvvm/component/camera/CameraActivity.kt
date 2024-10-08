@@ -1,4 +1,4 @@
-package com.msc.demo_mvvm.camera
+package com.msc.demo_mvvm.component.camera
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -27,6 +27,7 @@ import androidx.camera.view.video.OutputFileOptions
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
+import com.msc.demo_mvvm.R
 import com.msc.demo_mvvm.base.activity.BaseActivity
 import com.msc.demo_mvvm.databinding.ActivityCameraBinding
 import java.io.File
@@ -56,7 +57,7 @@ class CameraActivity : BaseActivity<ActivityCameraBinding>() {
     @OptIn(ExperimentalVideo::class)
     override fun initViews() {
         super.initViews()
-
+        setStatusBarColor(ContextCompat.getColor(this@CameraActivity, R.color.app_main), true)
         viewBinding.run {
             sbZoom.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
                 override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
@@ -85,7 +86,12 @@ class CameraActivity : BaseActivity<ActivityCameraBinding>() {
             }
 
             capture.setOnClickListener {
-                val file = File(externalMediaDirs.first(), "${System.currentTimeMillis()}.jpg")
+                val photoFolder = File(filesDir, "photo")
+                if(!photoFolder.exists()){
+                    photoFolder.mkdirs()
+                }
+                val file = File(photoFolder, System.currentTimeMillis().toString() + ".jpg")
+
                 val outputFileOptions = ImageCapture.OutputFileOptions.Builder(file).build()
 
                 imageCapture?.takePicture(
@@ -93,13 +99,11 @@ class CameraActivity : BaseActivity<ActivityCameraBinding>() {
                     ContextCompat.getMainExecutor(this@CameraActivity),
                     object : ImageCapture.OnImageSavedCallback {
                         override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
-                            // Image saved successfully, you can get the saved Uri
-                            val savedUri: Uri = outputFileResults.savedUri ?: Uri.fromFile(file)
-                            Log.i("gsdg", "onImageSaved: " + savedUri)
+                            showToast(getString(R.string.txt_saved_image))
                         }
 
                         override fun onError(exception: ImageCaptureException) {
-                            Log.e("gsdg", "Error capturing image: ${exception.message}", exception)
+                            exception.message?.let { it1 -> showToast(it1) }
                         }
                     }
                 )

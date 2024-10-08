@@ -68,4 +68,7 @@
     <string name="txt_photo_collage">Photo collection</string>
     <string name="txt_photo_collage_desc">Where to store your images</string>
     <string name="txt_setting_desc">Customize your settings</string>
+    <string name="txt_saved_image">Saved image</string>
+    <string name="txt_no_image">No Image</string>
+    <string name="txt_your_have_not_image">You have no photos yet</string>
 </resources>
