@@ -3,16 +3,17 @@ package com.msc.demo_mvvm.component.ump
 import com.msc.demo_mvvm.base.activity.BaseActivity
 import com.msc.demo_mvvm.component.splash.SplashActivity
 import com.msc.demo_mvvm.App
+import com.msc.demo_mvvm.databinding.ActivitySplashBinding
 import com.msc.demo_mvvm.databinding.ActivityUmpBinding
 import com.msc.demo_mvvm.utils.RemoteConfig
 import com.msc.demo_mvvm.utils.SpManager
 import com.msc.demo_mvvm.utils.UMPUtils
 
 
-class UMPActivity : BaseActivity<ActivityUmpBinding>() {
+class UMPActivity : BaseActivity<ActivitySplashBinding>() {
     private val TAG = "ump_activity"
 
-    override fun provideViewBinding(): ActivityUmpBinding = ActivityUmpBinding.inflate(layoutInflater)
+    override fun provideViewBinding(): ActivitySplashBinding = ActivitySplashBinding.inflate(layoutInflater)
 
     override fun initData() {
         super.initData()
