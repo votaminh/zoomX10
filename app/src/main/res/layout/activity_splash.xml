@@ -3,17 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_bg"
+    android:background="@color/white"
     >
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_splash"
-        android:layout_marginHorizontal="@dimen/size100"
+        android:id="@+id/imv"
+        android:layout_width="@dimen/size120"
+        android:layout_height="@dimen/size120"
+        android:src="@mipmap/ic_launcher_foreground"
         android:adjustViewBounds="true"
         android:layout_marginTop="@dimen/size100"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Supper magnifier"
+        android:textColor="@color/app_main_dark"
+        app:layout_constraintLeft_toLeftOf="@id/imv"
+        app:layout_constraintRight_toRightOf="@id/imv"
+        app:layout_constraintTop_toBottomOf="@id/imv"
+        android:textSize="@dimen/size17"
         />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -22,7 +35,7 @@
         android:layout_marginHorizontal="@dimen/size16"
         android:layout_marginBottom="@dimen/size8"
         android:text="@string/this_action_contain_ads"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="@dimen/size14"
         app:layout_constraintBottom_toTopOf="@id/progress_bar"
         app:layout_constraintEnd_toEndOf="parent"
