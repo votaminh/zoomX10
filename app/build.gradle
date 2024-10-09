@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace 'com.msc.demo_mvvm'
+    namespace 'com.msc.zoom10'
     compileSdk 34
 
     defaultConfig {
