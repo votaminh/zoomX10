@@ -29,6 +29,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
 import com.msc.demo_mvvm.R
 import com.msc.demo_mvvm.base.activity.BaseActivity
+import com.msc.demo_mvvm.component.photo_collage.PhotoCollageActivity
 import com.msc.demo_mvvm.databinding.ActivityCameraBinding
 import java.io.File
 import java.util.concurrent.Executors
@@ -108,6 +109,20 @@ class CameraActivity : BaseActivity<ActivityCameraBinding>() {
                     }
                 )
             }
+
+            collage.setOnClickListener {
+                PhotoCollageActivity.start(this@CameraActivity)
+            }
+
+            switchCamera.setOnClickListener {
+                if(lensFacing == CameraSelector.LENS_FACING_BACK){
+                    lensFacing = CameraSelector.LENS_FACING_FRONT
+                }else{
+                    lensFacing = CameraSelector.LENS_FACING_BACK
+                }
+
+                bindCameraUseCases()
+            }
         }
     }
 
@@ -143,6 +158,7 @@ class CameraActivity : BaseActivity<ActivityCameraBinding>() {
                 .setTargetAspectRatio(AspectRatio.RATIO_4_3)
                 .setTargetRotation(viewBinding.viewFinder.display.rotation)
                 .build()
+
 
             val cameraSelector = CameraSelector.Builder().requireLensFacing(lensFacing).build()
             cameraProvider.unbindAll()

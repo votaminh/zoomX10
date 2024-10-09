@@ -126,6 +126,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/collage"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
@@ -140,6 +141,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/switchCamera"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
