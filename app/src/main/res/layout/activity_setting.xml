@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/toolbar_language"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imvBack"
+            android:layout_width="@dimen/size40"
+            android:layout_height="@dimen/size40"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            app:tint="@color/black"
+            android:padding="@dimen/size6"
+            android:layout_marginLeft="@dimen/size5"
+            />
+
+        <TextView
+            android:text="@string/txt_setting"
+            style="@style/TextView_Headline1"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size16"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/imvBack"
+            />
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/btnRateUs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="@dimen/size20"
+        android:paddingHorizontal="@dimen/size20"
+        android:background="@drawable/bg_item_language"
+        android:layout_marginTop="@dimen/size30"
+        >
+        <ImageView
+            android:layout_width="@dimen/size24"
+            android:layout_height="@dimen/size24"
+            android:src="@drawable/ic_rate"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_rate_5_star"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size14"
+            android:layout_marginHorizontal="@dimen/size20"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/size24"
+            android:layout_height="@dimen/size24"
+            android:src="@drawable/ic_arrow_right"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btnLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="@dimen/size20"
+        android:paddingHorizontal="@dimen/size20"
+        android:background="@drawable/bg_item_language"
+        android:layout_marginTop="@dimen/size10"
+        >
+        <ImageView
+            android:layout_width="@dimen/size24"
+            android:layout_height="@dimen/size24"
+            android:src="@drawable/ic_language"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_language"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size14"
+            android:layout_marginHorizontal="@dimen/size20"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/size24"
+            android:layout_height="@dimen/size24"
+            android:src="@drawable/ic_arrow_right"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btnShare"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="@dimen/size20"
+        android:paddingHorizontal="@dimen/size20"
+        android:background="@drawable/bg_item_language"
+        android:layout_marginTop="@dimen/size10"
+        >
+        <ImageView
+            android:layout_width="@dimen/size24"
+            android:layout_height="@dimen/size24"
+            android:src="@drawable/ic_share"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_share"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size14"
+            android:layout_marginHorizontal="@dimen/size20"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/size24"
+            android:layout_height="@dimen/size24"
+            android:src="@drawable/ic_arrow_right"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btnPrivacyPolicy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="@dimen/size20"
+        android:paddingHorizontal="@dimen/size20"
+        android:background="@drawable/bg_item_language"
+        android:layout_marginTop="@dimen/size10"
+        >
+        <ImageView
+            android:layout_width="@dimen/size24"
+            android:layout_height="@dimen/size24"
+            android:src="@drawable/ic_policy"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_policy"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size14"
+            android:layout_marginHorizontal="@dimen/size20"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/size24"
+            android:layout_height="@dimen/size24"
+            android:src="@drawable/ic_arrow_right"
+            />
+
+    </LinearLayout>
+</LinearLayout>

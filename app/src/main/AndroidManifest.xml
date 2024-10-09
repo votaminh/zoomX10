@@ -46,6 +46,11 @@
         </activity>
 
         <activity
+            android:name=".component.setting.SettingActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
             android:name=".component.photo_collage.PhotoCollageActivity"
             android:exported="true">
         </activity>

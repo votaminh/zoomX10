@@ -20,6 +20,7 @@
             android:layout_centerVertical="true"
             app:tint="@color/black"
             android:padding="@dimen/size6"
+            android:layout_marginLeft="@dimen/size5"
             />
 
         <TextView
@@ -28,7 +29,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/size16"
             android:textColor="@color/black"
-            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/imvBack"
             />
 
         <TextView

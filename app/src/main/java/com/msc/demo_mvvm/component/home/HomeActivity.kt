@@ -7,6 +7,7 @@ import com.msc.demo_mvvm.R
 import com.msc.demo_mvvm.base.activity.BaseActivity
 import com.msc.demo_mvvm.component.camera.CameraActivity
 import com.msc.demo_mvvm.component.photo_collage.PhotoCollageActivity
+import com.msc.demo_mvvm.component.setting.SettingActivity
 import com.msc.demo_mvvm.databinding.ActivityMainBinding
 import com.msc.demo_mvvm.utils.SpManager
 import dagger.hilt.android.AndroidEntryPoint
@@ -45,7 +46,7 @@ class HomeActivity : BaseActivity<ActivityMainBinding>() {
             }
 
             setting.setOnClickListener {
-                showToast("setting")
+                SettingActivity.start(this@HomeActivity)
             }
         }
     }

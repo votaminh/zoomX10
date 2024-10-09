@@ -71,4 +71,5 @@
     <string name="txt_saved_image">Saved image</string>
     <string name="txt_no_image">No Image</string>
     <string name="txt_your_have_not_image">You have no photos yet</string>
+    <string name="txt_policy">Policy</string>
 </resources>
