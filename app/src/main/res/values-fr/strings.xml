@@ -1,3 +1,48 @@
 <resources>
+    <string name="onboarding_title1">Ajuster le zoom</string>
+    <string name="onboarding_intro1">Glissez vers la gauche ou la droite pour ajuster le niveau de zoom.</string>
+    <string name="onboarding_title2">Plus que juste un zoom</string>
+    <string name="onboarding_intro2">Plus de fonctions pour une meilleure expérience.</string>
+    <string name="onboarding_title3">Capturer une photo</string>
+    <string name="onboarding_intro3">Appuyez et maintenez pour capturer une image.</string>
+
+    <string name="txt_alarm">Alarme</string>
+    <string name="txt_rate_5_star">Noter 5 étoiles</string>
+    <string name="txt_revert_to_default">Revenir à la sonnerie par défaut</string>
+    <string name="txt_share">Partager</string>
+    <string name="txt_license">Licence</string>
+    <string name="txt_privacy_terms"><![CDATA[Confidentialité et conditions]]></string>
+    <string name="txt_error_report">Rapport d\'erreur</string>
+    <string name="txt_language">Langue</string>
+    <string name="txt_ok">OK</string>
+    <string name="txt_cancel">Annuler</string>
+    <string name="this_action_contain_ads">Cette action contient des publicités</string>
+    <string name="loading_cmp">Chargement de la plateforme de gestion des consentements</string>
+    <string name="txt_next">Suivant</string>
+    <string name="txt_get_start">Commencer</string>
+    <string name="are_you_sure_you_want_to_exit">Êtes-vous sûr de vouloir quitter ?</string>
+    <string name="txt_exit">Quitter</string>
+    <string name="txt_premission_request">Demande d\'autorisations</string>
+    <string name="txt_write_setting_permission">Écrire les paramètres</string>
+    <string name="txt_read_media_permisison">Lire les médias</string>
+    <string name="txt_receiver_notification">Recevoir des notifications</string>
+    <string name="txt_premission_request_message">Pour que l\'application fonctionne de manière stable, veuillez fournir les autorisations suivantes</string>
+    <string name="txt_zoom_in_on">Zoomez sur chaque détail !</string>
+    <string name="txt_zoom_in_on_desc">Zoomez sur chaque détail avec une clarté parfaite. Super Loupe facilite la visualisation des petites choses.</string>
+    <string name="txt_explore_now">Explorer maintenant</string>
+    <string name="txt_magnifier">Loupe</string>
+    <string name="txt_magnifier_desc">Appuyez pour zoomer sur n\'importe quoi</string>
+    <string name="txt_photo_collage">Collection de photos</string>
+    <string name="txt_photo_collage_desc">Où stocker vos images</string>
+    <string name="txt_setting_desc">Personnalisez vos paramètres</string>
+    <string name="txt_saved_image">Image enregistrée</string>
+    <string name="txt_no_image">Pas d\'image</string>
+    <string name="txt_your_have_not_image">Vous n\'avez pas encore de photos</string>
+    <string name="txt_policy">Politique</string>
+    <string name="txt_save">Enregistrer</string>
+    <string name="txt_delete_image">Supprimer l\'image ?</string>
+    <string name="txt_delete">Supprimer</string>
+    <string name="txt_saved_image_at">Enregistrer l\'image à : </string>
+    <string name="txt_setting">Paramètres</string>
 
 </resources>

@@ -18,7 +18,6 @@
     <TextView
         android:id="@+id/tvTitle"
         style="@style/TextView_Headline1"
-        android:text="@string/txt_categories"
         android:layout_width="0dp"
         android:layout_weight="1"
         />

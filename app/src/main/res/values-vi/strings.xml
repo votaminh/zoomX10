@@ -1,3 +1,47 @@
 <resources>
+    <string name="onboarding_title1">Điều chỉnh Zoom</string>
+    <string name="onboarding_intro1">Kéo sang trái hoặc phải để điều chỉnh mức độ zoom.</string>
+    <string name="onboarding_title2">Nhiều chức năng hơn là chỉ zoom</string>
+    <string name="onboarding_intro2">Nhiều chức năng hơn để có trải nghiệm tốt hơn.</string>
+    <string name="onboarding_title3">Chụp ảnh</string>
+    <string name="onboarding_intro3">Nhấn và giữ để chụp ảnh.</string>
 
+    <string name="txt_alarm">Báo thức</string>
+    <string name="txt_rate_5_star">Đánh giá 5 sao</string>
+    <string name="txt_revert_to_default">Quay lại nhạc chuông mặc định</string>
+    <string name="txt_share">Chia sẻ</string>
+    <string name="txt_license">Giấy phép</string>
+    <string name="txt_privacy_terms"><![CDATA[Quyền riêng tư & terms]]></string>
+    <string name="txt_error_report">Báo cáo lỗi</string>
+    <string name="txt_language">Ngôn ngữ</string>
+    <string name="txt_ok">Được</string>
+    <string name="txt_cancel">Hủy</string>
+    <string name="this_action_contain_ads">Hành động này chứa Quảng cáo</string>
+    <string name="loading_cmp">Đang tải Nền tảng quản lý sự đồng ý</string>
+    <string name="txt_next">Tiếp theo</string>
+    <string name="txt_get_start">Bắt đầu</string>
+    <string name="are_you_sure_you_want_to_exit">bạn có chắc chắn muốn thoát không?</string>
+    <string name="txt_exit">Thoát</string>
+    <string name="txt_premission_request">Yêu cầu quyền</string>
+    <string name="txt_write_setting_permission">Cài đặt ghi</string>
+    <string name="txt_read_media_permisison">Đọc media</string>
+    <string name="txt_receiver_notification">Nhận thông báo</string>
+    <string name="txt_premission_request_message">Để ứng dụng hoạt động ổn định, vui lòng cung cấp các quyền sau</string>
+    <string name="txt_zoom_in_on">Phóng to mọi chi tiết!</string>
+    <string name="txt_zoom_in_on_desc">Phóng to mọi chi tiết với độ rõ nét hoàn hảo. Super Magnifier giúp bạn dễ dàng nhìn thấy những thứ nhỏ bé.</string>
+    <string name="txt_explore_now">Khám phá ngay</string>
+    <string name="txt_magnifier">Kính lúp</string>
+    <string name="txt_magnifier_desc">Nhấn để phóng to bất kỳ thứ gì</string>
+    <string name="txt_photo_collage">Bộ sưu tập ảnh</string>
+    <string name="txt_photo_collage_desc">Nơi lưu trữ hình ảnh của bạn</string>
+    <string name="txt_setting_desc">Tùy chỉnh cài đặt của bạn</string>
+    <string name="txt_saved_image">Ảnh đã lưu</string>
+    <string name="txt_no_image">Không có ảnh</string>
+    <string name="txt_your_have_not_image">Bạn chưa có ảnh nào</string>
+    <string name="txt_policy">Chính sách</string>
+    <string name="txt_save">Lưu</string>
+    <string name="txt_delete_image">Xóa ảnh?</string>
+    <string name="txt_delete">Xóa</string>
+    <string name="txt_saved_image_at">Lưu hình ảnh tại: </string>
+    <string name="txt_setting">Cài đặt</string>
 </resources>

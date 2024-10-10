@@ -1,3 +1,48 @@
 <resources>
+    <string name="onboarding_title1">Ajustar Zoom</string>
+    <string name="onboarding_intro1">Arrastra hacia la izquierda o derecha para ajustar el nivel de zoom.</string>
+    <string name="onboarding_title2">Más que solo zoom</string>
+    <string name="onboarding_intro2">Más funciones para una mejor experiencia.</string>
+    <string name="onboarding_title3">Capturar foto</string>
+    <string name="onboarding_intro3">Toca y mantén presionado para capturar una imagen.</string>
+
+    <string name="txt_alarm">Alarma</string>
+    <string name="txt_rate_5_star">Califica con 5 estrellas</string>
+    <string name="txt_revert_to_default">Restablecer al tono de llamada predeterminado</string>
+    <string name="txt_share">Compartir</string>
+    <string name="txt_license">Licencia</string>
+    <string name="txt_privacy_terms"><![CDATA[Privacidad y términos]]></string>
+    <string name="txt_error_report">Informe de errores</string>
+    <string name="txt_language">Idioma</string>
+    <string name="txt_ok">Aceptar</string>
+    <string name="txt_cancel">Cancelar</string>
+    <string name="this_action_contain_ads">Esta acción contiene anuncios</string>
+    <string name="loading_cmp">Cargando la Plataforma de Gestión de Consentimiento</string>
+    <string name="txt_next">Siguiente</string>
+    <string name="txt_get_start">Comenzar</string>
+    <string name="are_you_sure_you_want_to_exit">¿Estás seguro de que deseas salir?</string>
+    <string name="txt_exit">Salir</string>
+    <string name="txt_premission_request">Solicitar permisos</string>
+    <string name="txt_write_setting_permission">Escribir configuración</string>
+    <string name="txt_read_media_permisison">Leer medios</string>
+    <string name="txt_receiver_notification">Recibir notificaciones</string>
+    <string name="txt_premission_request_message">Para que la aplicación funcione de manera estable, proporciona los siguientes permisos</string>
+    <string name="txt_zoom_in_on">¡Aumenta cada detalle!</string>
+    <string name="txt_zoom_in_on_desc">Acércate a cada detalle con claridad perfecta. Super Lupa hace que ver las cosas pequeñas sea fácil.</string>
+    <string name="txt_explore_now">Explorar ahora</string>
+    <string name="txt_magnifier">Lupa</string>
+    <string name="txt_magnifier_desc">Toca para hacer zoom en cualquier cosa</string>
+    <string name="txt_photo_collage">Colección de fotos</string>
+    <string name="txt_photo_collage_desc">Dónde almacenar tus imágenes</string>
+    <string name="txt_setting_desc">Personaliza tus configuraciones</string>
+    <string name="txt_saved_image">Imagen guardada</string>
+    <string name="txt_no_image">Sin imagen</string>
+    <string name="txt_your_have_not_image">Aún no tienes fotos</string>
+    <string name="txt_policy">Política</string>
+    <string name="txt_save">Guardar</string>
+    <string name="txt_delete_image">¿Eliminar imagen?</string>
+    <string name="txt_delete">Eliminar</string>
+    <string name="txt_saved_image_at">Guardar imagen en: </string>
+    <string name="txt_setting">Configuraciones</string>
 
 </resources>

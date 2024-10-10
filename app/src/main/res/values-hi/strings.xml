@@ -1,3 +1,46 @@
 <resources>
-
+    <string name="onboarding_title1">ज़ूम एडजस्ट करें</string>
+    <string name="onboarding_intro1">ज़ूम लेवल एडजस्ट करने के लिए बाएं या दाएं खींचें।</string>
+    <string name="onboarding_title2">सिर्फ़ ज़ूम से ज़्यादा</string>
+    <string name="onboarding_intro2">बेहतर अनुभव के लिए ज़्यादा फ़ंक्शन।</string>
+    <string name="onboarding_title3">फ़ोटो कैप्चर करें</string>
+    <string name="onboarding_intro3">इमेज कैप्चर करने के लिए टैप करके होल्ड करें।</string>
+    <string name="txt_alarm">अलार्म</string>
+    <string name="txt_rate_5_star">5 स्टार रेट करें</string>
+    <string name="txt_revert_to_default">डिफ़ॉल्ट रिंगटोन पर वापस लौटें</string>
+    <string name="txt_share">शेयर करें</string>
+    <string name="txt_license">लाइसेंस</string>
+    <string name="txt_privacy_terms"><![CDATA[गोपनीयता और शर्तें]]></string>
+    <string name="txt_error_report">त्रुटि रिपोर्ट</string>
+    <string name="txt_language">भाषा</string>
+    <string name="txt_ok">ठीक है</string>
+    <string name="txt_cancel">रद्द करें</string>
+    <string name="this_action_contain_ads">इस कार्रवाई में विज्ञापन शामिल हैं</string>
+    <string name="loading_cmp">सहमति प्रबंधन प्लेटफ़ॉर्म लोड हो रहा है</string>
+    <string name="txt_next">अगला</string>
+    <string name="txt_get_start">शुरू करें</string>
+    <string name="are_you_sure_you_want_to_exit">क्या आप वाकई ऐसा करना चाहते हैं बाहर निकलें?</string>
+    <string name="txt_exit">बाहर निकलें</string>
+    <string name="txt_premission_request">अनुमतियों का अनुरोध करें</string>
+    <string name="txt_write_setting_permission">सेटिंग्स लिखें</string>
+    <string name="txt_read_media_permisison">मीडिया पढ़ें</string>
+    <string name="txt_receiver_notification">सूचनाएँ प्राप्त करें</string>
+    <string name="txt_premission_request_message">ऐप को स्थिर रूप से संचालित करने के लिए, कृपया निम्नलिखित अनुमतियाँ प्रदान करें</string>
+    <string name="txt_zoom_in_on">हर विवरण पर ज़ूम इन करें!</string>
+    <string name="txt_zoom_in_on_desc">हर विवरण पर पूरी स्पष्टता के साथ ज़ूम इन करें। सुपर मैग्निफायर छोटी चीज़ों को देखना आसान बनाता है।</string>
+    <string name="txt_explore_now">अभी एक्सप्लोर करें</string>
+    <string name="txt_magnifier">मैग्निफायर</string>
+    <string name="txt_magnifier_desc">किसी भी चीज़ पर ज़ूम इन करने के लिए टैप करें</string>
+    <string name="txt_photo_collage">फ़ोटो संग्रह</string>
+    <string name="txt_photo_collage_desc">अपनी छवियों को कहाँ संग्रहीत करें</string>
+    <string name="txt_setting_desc">अपनी सेटिंग कस्टमाइज़ करें</string>
+    <string name="txt_saved_image">सेव की गई छवि</string>
+    <string name="txt_no_image">कोई छवि नहीं</string>
+    <string name="txt_your_have_not_image">आपके पास अभी तक कोई फ़ोटो नहीं है</string>
+    <string name="txt_policy">नीति</string>
+    <string name="txt_save">सहेजें</string>
+    <string name="txt_delete_image">छवि हटाएं?</string>
+    <string name="txt_delete">हटाएं</string>
+    <string name="txt_saved_image_at">छवि को यहां सहेजें:</string>
+    <string name="txt_setting">सेटिंग</string>
 </resources>

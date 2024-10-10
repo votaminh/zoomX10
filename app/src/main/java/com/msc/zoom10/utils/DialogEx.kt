@@ -15,7 +15,7 @@ import com.msc.zoom10.utils.DialogEx.showDialogSuccess
 object DialogEx {
     fun Activity.showDialogRequestWriteSettingPermission(okAction : (() -> Unit)? = null){
         val builder = AlertDialog.Builder(this)
-        builder.setTitle(getString(R.string.txt_write_setting_permission_title))
+//        builder.setTitle(getString(R.string.txt_write_setting_permission_title))
         builder.setPositiveButton(getString(R.string.txt_ok), object : DialogInterface.OnClickListener{
             override fun onClick(p0: DialogInterface?, p1: Int) {
                 okAction?.invoke()
