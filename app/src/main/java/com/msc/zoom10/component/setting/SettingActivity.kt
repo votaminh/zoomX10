@@ -28,6 +28,9 @@ class SettingActivity : BaseActivity<ActivitySettingBinding>() {
         setStatusBarColor(ContextCompat.getColor(this@SettingActivity, R.color.white), true)
 
         viewBinding.run {
+            imvBack.setOnClickListener {
+                finish()
+            }
             btnShare.setOnClickListener { shareApp() }
             btnLanguage.setOnClickListener {
                 LanguageActivity.start(this@SettingActivity, false)

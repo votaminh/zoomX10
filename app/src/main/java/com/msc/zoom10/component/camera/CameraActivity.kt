@@ -56,6 +56,11 @@ class CameraActivity : BaseActivity<ActivityCameraBinding>() {
         super.initViews()
         setStatusBarColor(ContextCompat.getColor(this@CameraActivity, R.color.app_main), true)
         viewBinding.run {
+
+            imvBack.setOnClickListener {
+                finish()
+            }
+
             sbZoom.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
                 override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
                     camera?.cameraControl?.setLinearZoom(p1/10f)
