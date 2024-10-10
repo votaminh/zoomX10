@@ -52,9 +52,9 @@ class App : Application(), Application.ActivityLifecycleCallbacks, DefaultLifecy
         val requestConfiguration = RequestConfiguration.Builder().build()
         MobileAds.setRequestConfiguration(requestConfiguration)
 
-        if(spManager.getBoolean(NameRemoteAdmob.APP_RESUME, true)){
-            openAdmob = OpenAdmob(this, BuildConfig.open_resume)
-        }
+//        if(spManager.getBoolean(NameRemoteAdmob.APP_RESUME, true)){
+//            openAdmob = OpenAdmob(this, BuildConfig.open_resume)
+//        }
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
