@@ -10,7 +10,7 @@
         android:id="@+id/imv"
         android:layout_width="@dimen/size120"
         android:layout_height="@dimen/size120"
-        android:src="@mipmap/ic_launcher_foreground"
+        android:src="@drawable/imv_splash"
         android:adjustViewBounds="true"
         android:layout_marginTop="@dimen/size100"
         app:layout_constraintTop_toTopOf="parent"
@@ -27,6 +27,8 @@
         app:layout_constraintRight_toRightOf="@id/imv"
         app:layout_constraintTop_toBottomOf="@id/imv"
         android:textSize="@dimen/size17"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/size10"
         />
 
     <androidx.appcompat.widget.AppCompatTextView

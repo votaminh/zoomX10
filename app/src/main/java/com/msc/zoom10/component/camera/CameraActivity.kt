@@ -19,11 +19,14 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.video.ExperimentalVideo
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import androidx.lifecycle.LifecycleOwner
 import com.msc.zoom10.R
 import com.msc.zoom10.base.activity.BaseActivity
 import com.msc.zoom10.component.photo_collage.PhotoCollageActivity
 import com.msc.zoom10.databinding.ActivityCameraBinding
+import com.msc.zoom10.utils.ViewEx.gone
+import com.msc.zoom10.utils.ViewEx.visible
 import java.io.File
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
@@ -67,6 +70,14 @@ class CameraActivity : BaseActivity<ActivityCameraBinding>() {
                 }
 
             })
+
+            zoom.setOnClickListener {
+                if(llZoom.isVisible){
+                    llZoom.gone()
+                }else{
+                    llZoom.visible()
+                }
+            }
 
             flash.setOnClickListener {
                 camera?.cameraControl?.enableTorch(!flash.isSelected)

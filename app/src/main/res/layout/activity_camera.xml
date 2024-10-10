@@ -33,14 +33,16 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/size15"
             >
 
             <LinearLayout
+                android:id="@+id/llZoom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/size15"
+                android:visibility="gone"
                 >
 
                 <TextView
@@ -81,6 +83,7 @@
             android:orientation="horizontal">
 
             <RelativeLayout
+                android:id="@+id/zoom"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
