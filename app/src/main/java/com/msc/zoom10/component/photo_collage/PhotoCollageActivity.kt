@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.msc.zoom10.R
 import com.msc.zoom10.base.activity.BaseActivity
+import com.msc.zoom10.component.preview.PreviewPhotoActivity
 import com.msc.zoom10.databinding.ActivityPhotoCollageBinding
 import com.msc.zoom10.utils.ViewEx.invisible
 import com.msc.zoom10.utils.ViewEx.visible
@@ -44,6 +45,9 @@ class PhotoCollageActivity : BaseActivity<ActivityPhotoCollageBinding>() {
         viewBinding.rePhotos.run {
             layoutManager = GridLayoutManager(this@PhotoCollageActivity, 4, RecyclerView.VERTICAL, false)
             adapter = photoAdapter
+            photoAdapter.onClick = {
+                PreviewPhotoActivity.start(this@PhotoCollageActivity, it.path)
+            }
         }
     }
 
@@ -59,6 +63,13 @@ class PhotoCollageActivity : BaseActivity<ActivityPhotoCollageBinding>() {
                 viewBinding.rePhotos.visible()
                 photoAdapter.setData(it)
             }
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        kotlin.runCatching {
+            viewModel.getListPhoto()
         }
     }
 }

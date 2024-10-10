@@ -10,6 +10,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.msc.zoom10.R
 import com.msc.zoom10.admob.NameRemoteAdmob
 import com.msc.zoom10.databinding.DialogExitBinding
+import com.msc.zoom10.utils.DialogEx.showDialogSuccess
 
 object DialogEx {
     fun Activity.showDialogRequestWriteSettingPermission(okAction : (() -> Unit)? = null){
@@ -67,5 +68,13 @@ object DialogEx {
                 }
             }
         }
+    }
+
+    fun Activity.showDialogDelete(deleteAction : (() -> Unit)? = null){
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle(getString(R.string.txt_delete_image))
+        builder.setPositiveButton(getString(R.string.txt_delete)
+        ) { p0, p1 -> deleteAction?.invoke()}
+        builder.show()
     }
 }

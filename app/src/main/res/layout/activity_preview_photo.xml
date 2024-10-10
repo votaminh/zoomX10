@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/toolbar_language"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imvBack"
+            android:layout_width="@dimen/size40"
+            android:layout_height="@dimen/size40"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            app:tint="@color/black"
+            android:padding="@dimen/size6"
+            android:layout_marginLeft="@dimen/size5"
+            />
+
+
+        <ImageView
+            android:id="@+id/imvDelete"
+            android:layout_width="@dimen/size40"
+            android:layout_height="@dimen/size40"
+            android:src="@drawable/ic_delete"
+            android:layout_centerVertical="true"
+            app:tint="@color/black"
+            android:padding="@dimen/size6"
+            android:layout_marginRight="@dimen/size5"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/tvSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_save"
+        android:background="@drawable/bg_main_round_10"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/size20"
+        android:paddingHorizontal="@dimen/size45"
+        android:paddingBottom="@dimen/size6"
+        android:paddingTop="@dimen/size5"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="@dimen/size30"
+        />
+
+</LinearLayout>

@@ -14,7 +14,9 @@ class PhotoAdapter : BaseAdapter<Photo, ItemPhotoBinding>() {
 
     override fun binData(viewBinding: ItemPhotoBinding, item: Photo) {
         super.binData(viewBinding, item)
-
+        viewBinding.root.setOnClickListener {
+            onClick?.invoke(item)
+        }
         viewBinding.run {
             Glide.with(root.context).load(item.path).into(imv)
         }

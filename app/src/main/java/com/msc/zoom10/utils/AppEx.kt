@@ -7,7 +7,12 @@ import android.content.Intent
 import android.net.Uri
 import com.msc.zoom10.BuildConfig
 import com.msc.zoom10.R
+import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
+import java.io.IOException
 import java.util.Locale
+import java.util.Objects
 
 
 object AppEx {
@@ -59,5 +64,32 @@ object AppEx {
         val config = resources.configuration
         config.setLocale(locale)
         resources.updateConfiguration(config, resources.displayMetrics)
+    }
+
+    fun Activity.copyFile(srcPath: String, desPath: String): Boolean {
+        return try {
+            val srcFile = File(srcPath)
+            val desFile = File(desPath)
+
+            if (!srcFile.exists()) {
+                return false
+            }
+
+            FileInputStream(srcFile).use { inputStream ->
+                FileOutputStream(desFile).use { outputStream ->
+                    val buffer = ByteArray(1024)
+                    var length: Int
+
+                    while (inputStream.read(buffer).also { length = it } > 0) {
+                        outputStream.write(buffer, 0, length)
+                    }
+                }
+            }
+
+            true
+        } catch (e: IOException) {
+            e.printStackTrace()
+            false
+        }
     }
 }
