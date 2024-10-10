@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "899010413058",
-    "project_id": "animal-sounds-and-ringtones",
-    "storage_bucket": "animal-sounds-and-ringtones.appspot.com"
+    "project_number": "301025845707",
+    "project_id": "super-magnifier-7cc5f",
+    "storage_bucket": "super-magnifier-7cc5f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:899010413058:android:a49e53784c1ba15ab79d1b",
+        "mobilesdk_app_id": "1:301025845707:android:b383bebb5e23609ced964e",
         "android_client_info": {
-          "package_name": "com.demo_mvvm"
+          "package_name": "com.trn.magnifyingglass.zoom.magnifier"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAK0A9ZlWTX6immemjM0x2LBlO9cd29ggw"
+          "current_key": "AIzaSyBj4vzg8wtIzJiY91qNuZ-Rf1uKeweHHGo"
         }
       ],
       "services": {

@@ -32,7 +32,7 @@ object AppEx {
 
     fun Context.showPolicyApp() {
         val openURL = Intent(Intent.ACTION_VIEW)
-        openURL.data = Uri.parse("https://sites.google.com/view/blowercleanerandwatereject/trang-ch%E1%BB%A7")
+        openURL.data = Uri.parse("https://sites.google.com/view/phone-magnifier-privacy-policy/trang-ch%E1%BB%A7")
         startActivity(openURL)
     }
 
