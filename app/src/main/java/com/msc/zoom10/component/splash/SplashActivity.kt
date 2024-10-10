@@ -70,37 +70,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
     }
 
     private fun runProgress() {
-
-        showBanner()
-
-        if (spManager.getBoolean(NameRemoteAdmob.INTER_SPLASH, true)) {
-            val interAdmob = InterAdmob(this@SplashActivity, BuildConfig.inter_splash)
-            interAdmob.load(object : BaseAdmob.OnAdmobLoadListener {
-                override fun onLoad() {
-                    if (spManager.getBoolean(NameRemoteAdmob.INTER_SPLASH, true)) {
-                        interAdmob.showInterstitial(
-                            this@SplashActivity,
-                            object : BaseAdmob.OnAdmobShowListener {
-                                override fun onShow() {
-                                    gotoMainScreen()
-                                }
-
-                                override fun onError(e: String?) {
-                                    gotoMainScreen()
-                                }
-                            })
-                    } else {
-                        gotoMainScreen()
-                    }
-                }
-
-                override fun onError(e: String?) {
-                    gotoMainScreen()
-                }
-            })
-        } else {
-            gotoMainScreen()
-        }
+        gotoMainScreen()
     }
 
     private fun showBanner() {

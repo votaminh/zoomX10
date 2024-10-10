@@ -93,49 +93,49 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
     }
 
     private fun switchAds() {
-        viewBinding.navigationLayout.visible()
-
-        if(onBoardingAdapter.itemCount == 4){
-            when (currentPosition) {
-                0 -> {
-                    intNativeToView(NativeAdmobUtils.onboardNativeAdmob1)
-                }
-
-                1 -> {
-                    intNativeToView(NativeAdmobUtils.onboardNativeAdmob2)
-                }
-
-                2 -> {
-                    viewBinding.navigationLayout.gone()
-                }
-
-                3 -> {
-                    intNativeToView(NativeAdmobUtils.onboardNativeAdmob3)
-                }
-
-                else -> {
-                    intNativeToView(NativeAdmobUtils.onboardNativeAdmob1)
-                }
-            }
-        }else{
-            when (currentPosition) {
-                0 -> {
-                    intNativeToView(NativeAdmobUtils.onboardNativeAdmob1)
-                }
-
-                1 -> {
-                    intNativeToView(NativeAdmobUtils.onboardNativeAdmob2)
-                }
-
-                2 -> {
-                    intNativeToView(NativeAdmobUtils.onboardNativeAdmob3)
-                }
-
-                else -> {
-                    intNativeToView(NativeAdmobUtils.onboardNativeAdmob1)
-                }
-            }
-        }
+//        viewBinding.navigationLayout.visible()
+//
+//        if(onBoardingAdapter.itemCount == 4){
+//            when (currentPosition) {
+//                0 -> {
+//                    intNativeToView(NativeAdmobUtils.onboardNativeAdmob1)
+//                }
+//
+//                1 -> {
+//                    intNativeToView(NativeAdmobUtils.onboardNativeAdmob2)
+//                }
+//
+//                2 -> {
+//                    viewBinding.navigationLayout.gone()
+//                }
+//
+//                3 -> {
+//                    intNativeToView(NativeAdmobUtils.onboardNativeAdmob3)
+//                }
+//
+//                else -> {
+//                    intNativeToView(NativeAdmobUtils.onboardNativeAdmob1)
+//                }
+//            }
+//        }else{
+//            when (currentPosition) {
+//                0 -> {
+//                    intNativeToView(NativeAdmobUtils.onboardNativeAdmob1)
+//                }
+//
+//                1 -> {
+//                    intNativeToView(NativeAdmobUtils.onboardNativeAdmob2)
+//                }
+//
+//                2 -> {
+//                    intNativeToView(NativeAdmobUtils.onboardNativeAdmob3)
+//                }
+//
+//                else -> {
+//                    intNativeToView(NativeAdmobUtils.onboardNativeAdmob1)
+//                }
+//            }
+//        }
     }
 
     private fun intNativeToView(nativeAdmob: NativeAdmob?) {
@@ -144,46 +144,46 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
     }
 
     override fun initObserver() {
-        super.initObserver()
-        viewBinding.flAdplaceholder.visibility = View.GONE
-        NativeAdmobUtils.onboardNativeAdmob1?.run {
-            nativeAdLive?.observe(this@OnBoardingActivity){
-                if(available() && spManager.getBoolean(NameRemoteAdmob.NATIVE_ONBOARD, true)){
-                    if(currentPosition == 0){
-                        viewBinding.flAdplaceholder.visibility = View.VISIBLE
-                        intNativeToView(this)
-                    }
-                }
-            }
-        }
-        NativeAdmobUtils.onboardNativeAdmob2?.run {
-            nativeAdLive?.observe(this@OnBoardingActivity){
-                if(available() && spManager.getBoolean(NameRemoteAdmob.NATIVE_ONBOARD, true)){
-                    if(currentPosition == 1){
-                        viewBinding.flAdplaceholder.visibility = View.VISIBLE
-                        intNativeToView(this)
-                    }
-                }
-            }
-        }
-        NativeAdmobUtils.onboardNativeAdmob3?.run {
-            nativeAdLive?.observe(this@OnBoardingActivity){
-                if(available() && spManager.getBoolean(NameRemoteAdmob.NATIVE_ONBOARD, true)){
-                    if(currentPosition == 2){
-                        viewBinding.flAdplaceholder.visibility = View.VISIBLE
-                        intNativeToView(this)
-                    }
-                }
-            }
-        }
-
-        NativeAdmobUtils.onboardFullNativeAdmob?.run {
-            nativeAdLive.observe(this@OnBoardingActivity){
-                if(available()){
-                    addAdsToOnboard(this)
-                }
-            }
-        }
+//        super.initObserver()
+//        viewBinding.flAdplaceholder.visibility = View.GONE
+//        NativeAdmobUtils.onboardNativeAdmob1?.run {
+//            nativeAdLive?.observe(this@OnBoardingActivity){
+//                if(available() && spManager.getBoolean(NameRemoteAdmob.NATIVE_ONBOARD, true)){
+//                    if(currentPosition == 0){
+//                        viewBinding.flAdplaceholder.visibility = View.VISIBLE
+//                        intNativeToView(this)
+//                    }
+//                }
+//            }
+//        }
+//        NativeAdmobUtils.onboardNativeAdmob2?.run {
+//            nativeAdLive?.observe(this@OnBoardingActivity){
+//                if(available() && spManager.getBoolean(NameRemoteAdmob.NATIVE_ONBOARD, true)){
+//                    if(currentPosition == 1){
+//                        viewBinding.flAdplaceholder.visibility = View.VISIBLE
+//                        intNativeToView(this)
+//                    }
+//                }
+//            }
+//        }
+//        NativeAdmobUtils.onboardNativeAdmob3?.run {
+//            nativeAdLive?.observe(this@OnBoardingActivity){
+//                if(available() && spManager.getBoolean(NameRemoteAdmob.NATIVE_ONBOARD, true)){
+//                    if(currentPosition == 2){
+//                        viewBinding.flAdplaceholder.visibility = View.VISIBLE
+//                        intNativeToView(this)
+//                    }
+//                }
+//            }
+//        }
+//
+//        NativeAdmobUtils.onboardFullNativeAdmob?.run {
+//            nativeAdLive.observe(this@OnBoardingActivity){
+//                if(available()){
+//                    addAdsToOnboard(this)
+//                }
+//            }
+//        }
     }
 
     private fun addAdsToOnboard(it: NativeAdmob?) {

@@ -49,14 +49,14 @@ object DialogEx {
             builder.setContentView(binding.root)
             builder.show()
 
-            NativeAdmobUtils.nativeExitLiveData?.run {
-                nativeAdLive?.observe(lifecycle){
-                    if(available() && SpManager.getInstance(activity).getBoolean(NameRemoteAdmob.NATIVE_EXIT, true)){
-                        binding.flAdplaceholder.visibility = View.VISIBLE
-                        showNative(binding.flAdplaceholder, null)
-                    }
-                }
-            }
+//            NativeAdmobUtils.nativeExitLiveData?.run {
+//                nativeAdLive?.observe(lifecycle){
+//                    if(available() && SpManager.getInstance(activity).getBoolean(NameRemoteAdmob.NATIVE_EXIT, true)){
+//                        binding.flAdplaceholder.visibility = View.VISIBLE
+//                        showNative(binding.flAdplaceholder, null)
+//                    }
+//                }
+//            }
 
             with(binding){
                 tvExit.setOnClickListener {
@@ -64,7 +64,7 @@ object DialogEx {
                 }
                 tvCancel.setOnClickListener {
                     builder.dismiss()
-                    NativeAdmobUtils.nativeExitLiveData?.reLoad()
+//                    NativeAdmobUtils.nativeExitLiveData?.reLoad()
                 }
             }
         }

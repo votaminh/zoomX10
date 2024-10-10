@@ -92,28 +92,6 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
 
         viewBinding.flAdplaceholder.visibility = View.GONE
 
-        if(NativeAdmobUtils.languageNativeAdmobDefault == null && spManager.getBoolean(NameRemoteAdmob.NATIVE_LANGUAGE, true)){
-            NativeAdmobUtils.loadNativeLanguage()
-        }
-
-        // Kiểm tra xem native 2floor đã load chưa, load rồi thì ưu tiên hiện luôn, nếu không thì observe ai load trước hiện trước
-        NativeAdmobUtils.languageNativeAdmob2Floor?.run {
-            if(available()){
-                checkShowNative(this)
-            }
-        }
-
-        NativeAdmobUtils.languageNativeAdmobDefault?.run {
-            nativeAdLive?.observe(this@LanguageActivity){
-                checkShowNative(this)
-            }
-        }
-
-        NativeAdmobUtils.languageNativeAdmob2Floor?.run {
-            nativeAdLive?.observe(this@LanguageActivity){
-                checkShowNative(this)
-            }
-        }
     }
 
     private fun checkShowNative(nativeAdmob: NativeAdmob) {
